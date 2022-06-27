@@ -18,7 +18,7 @@ var app = new Vue(
             todos: [
                 {
                     text: 'Dare da mangiare a Sirio',
-                    done: false
+                    done: true
                 },
                 {
                     text: 'Portare fuori Sirio',
@@ -26,7 +26,7 @@ var app = new Vue(
                 },
                 {
                     text: 'Seguire lezione Boolean',
-                    done: false
+                    done: true
                 },
                 {
                     text: 'Preparate pranzo',
@@ -34,7 +34,7 @@ var app = new Vue(
                 },
                 {
                     text: 'Fare esercitazione Boolean',
-                    done: false
+                    done: true
                 },
                 
             ]

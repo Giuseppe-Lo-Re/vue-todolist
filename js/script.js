@@ -35,8 +35,8 @@ var app = new Vue(
                 },
                 {
                     text: 'Fare esercitazione Boolean',
-                    done: true
-                },  
+                    done: true,
+                },
             ]
         },
         methods: {
@@ -44,8 +44,11 @@ var app = new Vue(
                 this.todos.splice(index, 1);
             },
             addNewTodoText() {
-                this.todos.push(this.newTodoText);
-                
+                const newTodo = {
+                    text: this.newTodoText,
+                    done: false
+                }
+                this.todos.push(newTodo);
             }
         }
     }

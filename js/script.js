@@ -15,6 +15,7 @@ var app = new Vue(
     {
         el: '#root',
         data: {
+            newTodoText:'',
             todos: [
                 {
                     text: 'Dare da mangiare a Sirio',
@@ -41,6 +42,10 @@ var app = new Vue(
         methods: {
             removeToDo(index) {
                 this.todos.splice(index, 1);
+            },
+            addNewTodoText() {
+                this.todos.push(this.newTodoText);
+                
             }
         }
     }

@@ -23,8 +23,8 @@
 
         <!-- Inputs -->
         <div class="inputs">
-            <input type="text" placeholder="Nuovo todo">
-            <button>Aggiungi</button>
+            <input v-model="newTodoText" type="text" placeholder="Nuovo todo">
+            <button @click="addNewTodoText()">Aggiungi</button>
         </div>
 
         <!-- To Do Container -->

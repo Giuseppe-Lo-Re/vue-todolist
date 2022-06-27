@@ -44,12 +44,14 @@ var app = new Vue(
                 this.todos.splice(index, 1);
             },
             addNewTodoText() {
-                const newTodo = {
-                    text: this.newTodoText,
-                    done: false
+                if(this.newTodoText.length > 0) {
+                    const newTodo = {
+                        text: this.newTodoText,
+                        done: false
+                    }
+                    this.todos.push(newTodo);
                 }
-                this.todos.push(newTodo);
-            }
+            },
         }
     }
 );

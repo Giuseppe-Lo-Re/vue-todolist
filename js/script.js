@@ -35,9 +35,13 @@ var app = new Vue(
                 {
                     text: 'Fare esercitazione Boolean',
                     done: true
-                },
-                
+                },  
             ]
+        },
+        methods: {
+            removeToDo(index) {
+                this.todos.splice(index, 1);
+            }
         }
     }
 );

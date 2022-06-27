@@ -32,8 +32,15 @@
             <ul class="todos-list">
 
                 <!-- Template base to do -->
-                <li v-for='todo in todos' class="todo" :class="{'line-through': todo.done}">
+                <li v-for="(todo, index) in todos" class="todo" :class="{'line-through': todo.done}">
                     {{ todo.text }}
+
+                    <!-- 'X' Icon -->
+                <div class="actions">
+                    <span>
+                        <i @click="removeToDo(index)" class="fa fa-times" aria-hidden="true"></i>
+                    </span>
+                </div>
                 </li>
             </ul>
         </div>

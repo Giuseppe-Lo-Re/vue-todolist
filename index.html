@@ -29,8 +29,8 @@
             <ul class="todos-list">
 
                 <!-- Template base to do -->
-                <li class="todo">
-                    
+                <li v-for='todo in todos' class="todo">
+                    {{ todo.text }}
                 </li>
             </ul>
         </div>

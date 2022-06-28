@@ -44,13 +44,15 @@ var app = new Vue(
                 this.todos.splice(index, 1);
             },
             addNewTodoText() {
-                const trimmedString = newTodoText.trim();
-                if(this.trimmedString.length > 0) {
+                const trimmedString = this.newTodoText.trim();
+                if(trimmedString.length > 0) {
                     const newTodo = {
-                        text: this.trimmedString,
+                        text: trimmedString,
                         done: false
                     }
                     this.todos.push(newTodo);
+
+                    this.newTodoText = '';
                 }
             },
         }
